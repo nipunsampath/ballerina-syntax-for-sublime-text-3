@@ -25,12 +25,12 @@ contexts:
     # strings in YAML. When using single quoted strings, only single quotes
     # need to be escaped: this is done by using two single quotes next to each
     # other.
-    - match: '\b(if|else|for|while)\b'
-      scope: keyword.control.example-c
+    - match: '\b(if|else|foreach|in|while)\b'
+      scope: keyword.control.bal
 
   numbers:
     - match: '\b(-)?[0-9.]+\b'
-      scope: constant.numeric.example-c
+      scope: constant.numeric.bal
 
   strings:
     # Strings begin and end with quotes, and use backslashes as an escape
@@ -50,10 +50,13 @@ contexts:
 
   comments:
     # Comments begin with a '//' and finish at the end of the line.
-    - match: '#'
+    - match: '//'
       scope: punctuation.definition.comment.bal
       push:
         # This is an anonymous context push for brevity.
-        - meta_scope: comment.line.double-slash.example-c
+        - meta_scope: comment.line.double-slash.bal
+        - match: '(\\)$\n'
+          captures:
+            1: punctuation.separator.continuation.bal
         - match: $\n?
           pop: true
