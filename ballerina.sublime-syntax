@@ -1,62 +1,60 @@
 %YAML 1.2
 ---
 # See http://www.sublimetext.com/docs/3/syntax.html
-name: balerina
+name: Balerina
 file_extensions:
   - bal
 scope: source.bal
-
 contexts:
-  # The prototype context is prepended to all contexts but those setting
-  # meta_include_prototype: false.
-  prototype:
-    - include: comments
-
   main:
-    # The main context is the initial starting point of our syntax.
-    # Include other contexts from here (or specify them directly).
-    - include: keywords
-    - include: numbers
-    - include: strings
+    # Strings begin and end with quotes, and use backslashes as an escape
+    # character
+    - match: '"'
+      scope: punctuation.definition.string.begin.ballerina
+      push: double_quoted_string
 
-  keywords:
+    # Comments begin with a '//' and finish at the end of the line
+    - match: '//'
+      scope: punctuation.definition.comment.ballerina
+      push: line_comment
+
     # Keywords are if, else for and while.
     # Note that blackslashes don't need to be escaped within single quoted
     # strings in YAML. When using single quoted strings, only single quotes
     # need to be escaped: this is done by using two single quotes next to each
     # other.
-    - match: '\b(if|else|foreach|in|while)\b'
-      scope: keyword.control.bal
+    - match: '\b(if|else|for|while)\b'
+      scope: keyword.control.ballerina
 
-  numbers:
+    # Numbers
     - match: '\b(-)?[0-9.]+\b'
-      scope: constant.numeric.bal
+      scope: constant.numeric.ballerina
 
-  strings:
-    # Strings begin and end with quotes, and use backslashes as an escape
-    # character.
-    - match: '"'
-      scope: punctuation.definition.string.begin.example-c
-      push: inside_string
+    # Stray brackets
+    - match: \(
+      push: brackets
+    - match: \)
+      scope: invalid.illegal.stray-bracket-end
 
-  inside_string:
-    - meta_include_prototype: false
-    - meta_scope: string.quoted.double.example-c
-    - match: '\.'
-      scope: constant.character.escape.example-c
+    # Function names
+    - match: \b(function|service|resource|connector|action|worker)\b
+      scope: entity.name.function
+
+
+  double_quoted_string:
+    - meta_scope: string.quoted.double.ballerina
+    - match: '\\.'
+      scope: constant.character.escape.ballerina
     - match: '"'
-      scope: punctuation.definition.string.end.example-c
+      scope: punctuation.definition.string.end.ballerina
       pop: true
 
-  comments:
-    # Comments begin with a '//' and finish at the end of the line.
-    - match: '//'
-      scope: punctuation.definition.comment.bal
-      push:
-        # This is an anonymous context push for brevity.
-        - meta_scope: comment.line.double-slash.bal
-        - match: '(\\)$\n'
-          captures:
-            1: punctuation.separator.continuation.bal
-        - match: $\n?
-          pop: true
+  line_comment:
+    - meta_scope: comment.line.ballerina
+    - match: $
+      pop: true
+
+  brackets:
+    - match: \)
+      pop: true
+    - include: main
