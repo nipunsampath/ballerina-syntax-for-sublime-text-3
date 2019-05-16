@@ -1,7 +1,7 @@
 %YAML 1.2
 ---
 # See http://www.sublimetext.com/docs/3/syntax.html
-name: Balerina
+name: Ballerina
 file_extensions:
   - bal
 scope: source.bal
@@ -19,7 +19,7 @@ contexts:
       push: line_comment
 
     # Keywords 
-    - match: '\b(iterator|try|catch|finally|fork|join|all|some|while|throw|return|returns|break|timeout|transaction|aborted|abort|committed|failed|retries|next|bind|with|lengthof|typeof|enum)\b'
+    - match: '\b(iterator|try|catch|match|finally|fork|join|all|some|while|foreach|throw|return|returns|break|timeout|transaction|aborted|abort|committed|failed|retries|next|bind|with|lengthof|typeof|enum)\b'
       scope: keyword.control.ballerina
     - match: '\b(if|else)\b'
       scope: keyword.control.conditional.ballerina
