@@ -1,0 +1,15 @@
+<snippet>
+	<description>Error handling</description>
+	<content><![CDATA[try
+{
+	${1:// try statements }
+}
+catch(${2:error_type})
+{
+	${3:// error handling logic }
+}
+]]></content>
+	<tabTrigger>try/catch</tabTrigger>
+	
+	<scope>source.bal</scope>
+</snippet>

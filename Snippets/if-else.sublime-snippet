@@ -1,5 +1,5 @@
 <snippet>
-	<description>If - Else</description>
+	<description>Flow control</description>
 	<content><![CDATA[if (${1:// condition })
 {
 	${0:// if code }
@@ -8,7 +8,9 @@ else
 {
 	${3:// else code }
 }]]></content>
-	<tabTrigger>if </tabTrigger>
-	<tabTrigger>else </tabTrigger>
+	<tabTrigger>if/else</tabTrigger>
+	
 	<scope>source.bal</scope>
 </snippet>
+
+

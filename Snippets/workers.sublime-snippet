@@ -1,0 +1,11 @@
+<snippet>
+	<description>Concurrency</description>
+	<content><![CDATA[worker ${1:name}
+{
+	${2:// statements }
+}
+]]></content>
+	<tabTrigger>worker</tabTrigger>
+	
+	<scope>source.bal</scope>
+</snippet>

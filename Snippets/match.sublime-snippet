@@ -1,0 +1,11 @@
+<snippet>
+	<description>Type switching</description>
+	<content><![CDATA[match ${1:expression}
+{
+	${2:// match pattern clause }
+}
+]]></content>
+	<tabTrigger>match</tabTrigger>
+	
+	<scope>source.bal</scope>
+</snippet>

@@ -1,5 +1,5 @@
 <snippet>
-	<description>Function</description>
+	<description>Functions</description>
 	<content><![CDATA[function ${1:name}(${2:args })
 {
 	${3:// function body }

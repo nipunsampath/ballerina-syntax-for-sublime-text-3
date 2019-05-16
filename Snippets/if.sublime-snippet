@@ -1,5 +1,5 @@
 <snippet>
-	<description>If</description>
+	<description>Flow control</description>
 	<content><![CDATA[if(${1:/* condition */})
 {
 	${0:/* code */}
