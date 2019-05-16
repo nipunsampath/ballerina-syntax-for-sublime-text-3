@@ -1,0 +1,11 @@
+<snippet>
+	<description>Loops</description>
+	<content><![CDATA[while(${1:condition})
+{
+	${2:// loop body }
+}
+]]></content>
+	<tabTrigger>while</tabTrigger>
+	
+	<scope>source.bal</scope>
+</snippet>

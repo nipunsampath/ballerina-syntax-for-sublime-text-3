@@ -1,0 +1,11 @@
+<snippet>
+	<description>Loops</description>
+	<content><![CDATA[foreach ${1:item} in ${2:iterable}
+{
+	${3:// loop body }
+}
+]]></content>
+	<tabTrigger>foreach</tabTrigger>
+	
+	<scope>source.bal</scope>
+</snippet>
