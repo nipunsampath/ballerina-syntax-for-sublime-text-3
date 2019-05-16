@@ -1,0 +1,11 @@
+<snippet>
+	<description>Functions</description>
+	<content><![CDATA[function main(${1:string... args})
+{
+	${2:// function body }
+}
+]]></content>
+	<tabTrigger>main</tabTrigger>
+	
+	<scope>source.bal</scope>
+</snippet>
