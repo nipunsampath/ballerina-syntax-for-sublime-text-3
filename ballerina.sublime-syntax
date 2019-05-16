@@ -18,14 +18,24 @@ contexts:
       scope: punctuation.definition.comment.ballerina
       push: line_comment
 
-    # Keywords are if, else for and while.
-    # Note that blackslashes don't need to be escaped within single quoted
-    # strings in YAML. When using single quoted strings, only single quotes
-    # need to be escaped: this is done by using two single quotes next to each
-    # other.
-    - match: '\b(if|else|for|while)\b'
+    # Keywords 
+    - match: '\b(iterator|try|catch|finally|fork|join|all|some|while|throw|return|returns|break|timeout|transaction|aborted|abort|committed|failed|retries|next|bind|with|lengthof|typeof|enum)\b'
       scope: keyword.control.ballerina
+    - match: '\b(if|else)\b'
+      scope: keyword.control.conditional.ballerina
+    - match: '\b(import)\b'
+      scope: keyword.control.import.ballerina
+    - match: \b(version|public|attach|as|native|documentation|lock)\b
+      scope: keyword.control.other.ballerina
+    - match: \b(annotation|package|type|struct|transformer|endpoint)\b
+      scope: keyword.control.other.ballerina
+    - match: \b(const|true|false|reply|create|parameter)\b
+      scope: keyword.control.other.ballerina
 
+    # Operators
+    - match: '(!|%|\+|\-|~=|==|=|!=|<|>|&&|\|\|)'
+      scope: keyword.operator.ballerina
+    
     # Numbers
     - match: '\b(-)?[0-9.]+\b'
       scope: constant.numeric.ballerina
@@ -36,10 +46,19 @@ contexts:
     - match: \)
       scope: invalid.illegal.stray-bracket-end
 
-    # Function names
+    # Functions and services
     - match: \b(function|service|resource|connector|action|worker)\b
-      scope: entity.name.function
+      scope: storage.type.function.ballerina
 
+    # Storage types
+    - match: \b(boolean|int|float|string|var|any|datatable|blob)\b
+      scope: storage.type.ballerina
+    - match: \b(map|exception|json|xml|xmlns|error)\b
+      scope: storage.type.ballerina 
+
+    # Annotations
+    - match: '@[a-zA-Z0-9_$]+'
+      scope: storage.type.annotations.ballerina
 
   double_quoted_string:
     - meta_scope: string.quoted.double.ballerina
