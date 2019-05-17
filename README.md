@@ -11,10 +11,16 @@ for ballerina source files on Sublime Text 3.
 
 #### - Manual Installation
 
-Clone the repository in `~\Sublime Text 3\Packages\User` diectory
+Clone the repository in `Sublime installation path\Packages\User` diectory
 
 #### - Via Package Control 
 
 Not yet supported.
 
-Shout-out to [ballerina-attic](https://github.com/ballerina-attic) for providing some of the regexes used in here.
+### Autocompletion Hot Keys
+
+* Move forward through fields&nbsp;&nbsp;&nbsp; =&nbsp; <kbd>tab</kbd>
+* Move backward through fields =&nbsp; <kbd>shift</kbd> + <kbd>tab</kbd>
+
+
+Shout-out to [ballerina-attic](https://github.com/ballerina-attic) for acting as a reference point for some of the regexes used here.
