@@ -1,0 +1,20 @@
+{
+	"schema_version": "1.2",
+	"packages": [
+		{
+			"name": "Ballerina",
+			"description": "Ballerina language package for Sublime Text 3. Currently under development",
+			"author": "Nipun Sampath",
+			"homepage": "https://github.com/nipunsampath/ballerina-syntax-for-sublime-text-3",
+			"last_modified": "2019-06-12 01:19:24",
+			"platforms": {
+				"*": [
+					{
+						"version": "1.0",
+						"url": "https://github.com/nipunsampath/ballerina-syntax-for-sublime-text-3"
+					}
+				]
+			}
+		}
+	]
+}
