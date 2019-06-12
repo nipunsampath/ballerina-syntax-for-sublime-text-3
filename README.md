@@ -15,7 +15,7 @@ Clone the repository in `Sublime installation path\Packages\User` diectory
 
 #### - Via Package Control 
 
-Not yet supported.
+Pull request is pending merge at the [package_control_channel](https://github.com/wbond/package_control_channel).   
 
 ### Autocompletion Hot Keys
 
