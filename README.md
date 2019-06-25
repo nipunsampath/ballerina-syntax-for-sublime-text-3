@@ -3,19 +3,15 @@
 Provides:
 
 * Syntax Highlighting
-* Autocompletion 
+* Code Completion 
 
 for ballerina source files on Sublime Text 3.
 
 ### Installation 
 
-#### - Manual Installation
+#### Install using Sublime package control:
 
-Clone the repository in `Sublime installation path\Packages\User` diectory
-
-#### - Via Package Control 
-
-Pull request is pending merge at the [package_control_channel](https://github.com/wbond/package_control_channel).   
+* Preferences -> Package Control -> Install Package -> Search for "Ballerina" 
 
 ### Autocompletion Hot Keys
 
@@ -24,10 +20,10 @@ Pull request is pending merge at the [package_control_channel](https://github.co
 
 ### Screenshots & GIFs
 
-Syntax Highlighting: 
+#### Syntax Highlighting: 
 ![Syntax Highlighting](https://i.imgur.com/GAIcveI.png)
 
-Autocompletion: <br>
+#### Code Completion: <br>
 
 ![Syntax Highlighting](https://media.giphy.com/media/S6MsYcntKgrycU6X0z/giphy.gif)
 
