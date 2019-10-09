@@ -53,7 +53,7 @@ contexts:
     # Storage types
     - match: \b(boolean|int|float|string|var|any|datatable|blob)\b
       scope: storage.type.ballerina
-    - match: \b(map|exception|json|xml|xmlns|error)\b
+    - match: \b(map|exception|json|xml|xmlns|error|byte|handle)\b
       scope: storage.type.ballerina 
 
     # Annotations
