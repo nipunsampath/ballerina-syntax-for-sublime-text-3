@@ -33,7 +33,7 @@ contexts:
       scope: keyword.control.other.ballerina
 
     # Operators
-    - match: '(!|%|\+|\-|~=|==|=|!=|<|>|&&|\|\|)'
+    - match: '(!|%|\+|\-|~=|==|=|!=|<|>|&&|\|\|.@|)'
       scope: keyword.operator.ballerina
     
     # Numbers
